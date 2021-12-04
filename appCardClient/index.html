@@ -1,0 +1,83 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <h1 id ="titre">Mon jeu de carte</h1>
+
+  <ul id="cardsForm">
+    <li>
+    <label class="form-control" for="cardNb1">Selectionner le nombre de cartes : </label>
+    <select class="form-control" id="cardNb1">
+      <option>52</option>
+      <option>32</option>
+    </select>
+    <button type="button" class="btn" id="createCardsButton">Créer un jeu de carte </button></li>
+    <!--<li><a href="#" id="createCardsButton">Créer un jeu de carte</a></li>-->
+    <li>
+      <span id="messageErrorCardId" style="color: red;"></span>
+      <input type="text" name="card-id" id="cardIdInput" placeholder="Entrer l'ID du paquet">
+      <button type="button" id="getCardsButton" class="btn">Chercher le paquet</button>
+    </li>
+  </ul>
+  <div id="cardsPanel">
+    <div class="actions">
+      <button type="button" id="deleteCardsButton" class="btn btn-danger">Supprimer le paquet</button>
+      <button type="button" id="shuffleCardsButton" class="btn btn-success">Mélanger le paquet</button>
+      <button type="button" id="discardCardsButton" class="btn btn-success">Mettre la premiere carte à la défausse</button>
+      <button type="button" id="putDiscardCardsButton" class="btn btn-success">Remettre la carte dans le jeu</button>
+      <button type="button" id="showGameButton" class="btn btn-success">Afficher le jeu</button>
+      <button type="button" id="hideGameButton" class="btn btn-success">Cacher le jeu</button>
+
+    </div>
+    <h2>Mon Deck id : <span id="deckId"></span></h2>
+
+    <div id = "deck">
+      <h3> <span id = "message"></span></h3>
+      <div id="mesc">
+    <h2> <span id="mescartes">Mes cartes</span></h2>
+    <ul id="cardsList"></ul>
+      </div>
+      <div id="disc">
+    <h2>  <span id="defausse">Ma défausse</span></h2>
+    <ul id="discartList"> </ul>
+      </div>
+    </div>
+  </div>
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
+s
